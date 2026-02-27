@@ -36,3 +36,6 @@
 - 新增 Compose 示例应以可组合函数形式添加，并附带 `@Preview` 注解
 - 使用 Material 3 组件和 `MaterialTheme` 的设计令牌（颜色、字体排版），避免硬编码值
 - 遵循 Kotlin 官方代码风格（已在 `gradle.properties` 中配置）
+
+## 强制规定
+- 除非我明确指出，否则不要主动帮我执行 `gradle` 相关的任何命令.

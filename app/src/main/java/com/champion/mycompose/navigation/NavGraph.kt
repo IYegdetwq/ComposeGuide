@@ -17,6 +17,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import com.champion.mycompose.BasicLayoutDemo
+import com.champion.mycompose.ScrollStateComparisonDemo
+import com.champion.mycompose.ThemePropertiesGuide
+import com.champion.mycompose.ThemeComparisonDemo
+import com.champion.mycompose.ThemePlayground
 import com.champion.mycompose.ui.demo.ComingSoonScreen
 import com.champion.mycompose.ui.home.HomeScreen
 import com.champion.mycompose.ui.home.demoItems
@@ -46,6 +50,10 @@ fun AppNavGraph(navController: NavHostController) {
             ) { modifier ->
                 when (demoId) {
                     "basic_layout" -> BasicLayoutDemo(modifier = modifier)
+                    "scroll_state" -> ScrollStateComparisonDemo()
+                    "theme_properties" -> ThemePropertiesGuide(modifier = modifier)
+                    "theme_comparison" -> ThemeComparisonDemo(modifier = modifier)
+                    "theme_playground" -> ThemePlayground(modifier = modifier)
                     else -> ComingSoonScreen(title = demoTitle, modifier = modifier)
                 }
             }
