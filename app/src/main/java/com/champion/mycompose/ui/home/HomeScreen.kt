@@ -53,7 +53,7 @@ val demoItems = listOf(
     DemoItem("theme_properties", "主题属性指南", "ColorScheme、Typography、Shapes 完整说明", LearningPhase.PHASE_1, available = true),
     DemoItem("theme_comparison", "主题对比演示", "浅色/深色主题视觉差异对比", LearningPhase.PHASE_1, available = true),
     DemoItem("theme_playground", "主题配置器", "交互式主题参数调整工具", LearningPhase.PHASE_1, available = true),
-    DemoItem("basic_components", "常用组件", "Button、Text、Image 等基础组件", LearningPhase.PHASE_1),
+    DemoItem("basic_components", "常用组件", "Button、Text、Image 等基础组件", LearningPhase.PHASE_1, available = true),
     DemoItem("input_forms", "输入与表单", "TextField、Checkbox、Switch 等", LearningPhase.PHASE_1),
     DemoItem("state_management", "状态管理", "remember、State、状态提升", LearningPhase.PHASE_1),
     DemoItem("lists", "列表组件", "LazyColumn、LazyRow、LazyGrid", LearningPhase.PHASE_2),

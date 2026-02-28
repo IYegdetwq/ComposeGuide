@@ -21,6 +21,7 @@ import com.champion.mycompose.ScrollStateComparisonDemo
 import com.champion.mycompose.ThemePropertiesGuide
 import com.champion.mycompose.ThemeComparisonDemo
 import com.champion.mycompose.ThemePlayground
+import com.champion.mycompose.ui.components.BasicComponentsDemo
 import com.champion.mycompose.ui.demo.ComingSoonScreen
 import com.champion.mycompose.ui.home.HomeScreen
 import com.champion.mycompose.ui.home.demoItems
@@ -54,6 +55,7 @@ fun AppNavGraph(navController: NavHostController) {
                     "theme_properties" -> ThemePropertiesGuide(modifier = modifier)
                     "theme_comparison" -> ThemeComparisonDemo(modifier = modifier)
                     "theme_playground" -> ThemePlayground(modifier = modifier)
+                    "basic_components" -> BasicComponentsDemo(modifier = modifier)
                     else -> ComingSoonScreen(title = demoTitle, modifier = modifier)
                 }
             }
