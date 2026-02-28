@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+*[Cc][Ll][Aa][Uu][Dd][Ee]*
+.idea
+.kotlin
