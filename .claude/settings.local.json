@@ -13,7 +13,10 @@
       "Bash(gh:*)",
       "Bash(brew install:*)",
       "Bash(git add:*)",
-      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate project files\n\n- Add theme comparison and playground demos\n- Update navigation and home screen\n- Update project documentation\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n\\)\")"
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate project files\n\n- Add theme comparison and playground demos\n- Update navigation and home screen\n- Update project documentation\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Skill(skill-creator)"
     ]
   }
 }
