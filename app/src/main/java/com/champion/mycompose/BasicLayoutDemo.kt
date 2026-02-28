@@ -302,7 +302,7 @@ private fun ProfileCard() {
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
-                "Android 开发工程师 · 10年经验",
+                "Android Compose",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
