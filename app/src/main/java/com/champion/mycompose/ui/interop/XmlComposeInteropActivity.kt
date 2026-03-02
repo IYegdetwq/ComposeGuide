@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import androidx.activity.ComponentActivity
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -29,6 +29,7 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
 import com.champion.mycompose.R
 import com.champion.mycompose.ui.theme.MyComposeTheme
+import com.google.android.material.appbar.MaterialToolbar
 
 /**
  * XML 与 Compose 混合开发 - 中等复杂度示例
@@ -38,7 +39,7 @@ import com.champion.mycompose.ui.theme.MyComposeTheme
  * 2. Compose → XML 事件回调
  * 3. ViewModel 状态管理
  */
-class XmlComposeInteropActivity : ComponentActivity() {
+class XmlComposeInteropActivity : AppCompatActivity() {
 
     // 使用 viewModels() 委托创建 ViewModel
     private val viewModel: XmlComposeInteropViewModel by viewModels()
@@ -46,6 +47,12 @@ class XmlComposeInteropActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_xml_compose_interop)
+
+        // 设置 Toolbar 并启用返回按钮
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        toolbar.setNavigationOnClickListener {
+            finish()
+        }
 
         setupScene1()
         setupScene2()

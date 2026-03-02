@@ -65,12 +65,14 @@ fun AppNavGraph(navController: NavHostController) {
                         val context = LocalContext.current
                         LaunchedEffect(Unit) {
                             context.startActivity(Intent(context, com.champion.mycompose.ui.interop.XmlComposeBasicActivity::class.java))
+                            navController.popBackStack()
                         }
                     }
                     "xml_compose_interop" -> {
                         val context = LocalContext.current
                         LaunchedEffect(Unit) {
                             context.startActivity(Intent(context, com.champion.mycompose.ui.interop.XmlComposeInteropActivity::class.java))
+                            navController.popBackStack()
                         }
                     }
                     else -> ComingSoonScreen(title = demoTitle, modifier = modifier)

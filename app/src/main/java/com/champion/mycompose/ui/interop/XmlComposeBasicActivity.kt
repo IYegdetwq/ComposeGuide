@@ -3,7 +3,7 @@ package com.champion.mycompose.ui.interop
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -26,16 +26,23 @@ import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.unit.dp
 import com.champion.mycompose.R
 import com.champion.mycompose.ui.theme.MyComposeTheme
+import com.google.android.material.appbar.MaterialToolbar
 
 /**
  * XML 与 Compose 混合开发 - 基础示例
  *
  * 演示如何在传统 XML 布局中使用 ComposeView 嵌入 Compose 组件
  */
-class XmlComposeBasicActivity : ComponentActivity() {
+class XmlComposeBasicActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_xml_compose_basic)
+
+        // 设置 Toolbar 并启用返回按钮
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        toolbar.setNavigationOnClickListener {
+            finish()
+        }
 
         // 设置 Compose 区域 1：展示简单的 Text 和 Card
         findViewById<ComposeView>(R.id.composeView1).setContent {

@@ -26,12 +26,12 @@
     <activity
         android:name=".ui.interop.XmlComposeBasicActivity"
         android:exported="false"
-        android:theme="@style/Theme.MyCompose" />
+        android:theme="@style/Theme.MyCompose.XmlInterop" />
 
     <activity
         android:name=".ui.interop.XmlComposeInteropActivity"
         android:exported="false"
-        android:theme="@style/Theme.MyCompose" />
+        android:theme="@style/Theme.MyCompose.XmlInterop" />
   </application>
 
 </manifest>
