@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 传统 XML 区域 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="这是传统 XML TextView"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:background="?attr/colorSurfaceVariant"
+        android:textColor="?attr/colorOnSurfaceVariant"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Compose 区域 1:简单文本和卡片 -->
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/composeView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 传统 XML 按钮 -->
+    <Button
+        android:id="@+id/xmlButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="XML 按钮"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Compose 区域 2:Material 组件 -->
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/composeView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
