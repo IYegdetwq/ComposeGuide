@@ -1,5 +1,6 @@
 package com.champion.mycompose.navigation
 
+import android.content.Intent
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -10,7 +11,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -58,6 +61,18 @@ fun AppNavGraph(navController: NavHostController) {
                     "theme_playground" -> ThemePlayground(modifier = modifier)
                     "basic_components" -> BasicComponentsDemo(modifier = modifier)
                     "input_forms" -> InputFormsDemo(modifier = modifier)
+                    "xml_compose_basic" -> {
+                        val context = LocalContext.current
+                        LaunchedEffect(Unit) {
+                            context.startActivity(Intent(context, com.champion.mycompose.ui.interop.XmlComposeBasicActivity::class.java))
+                        }
+                    }
+                    "xml_compose_interop" -> {
+                        val context = LocalContext.current
+                        LaunchedEffect(Unit) {
+                            context.startActivity(Intent(context, com.champion.mycompose.ui.interop.XmlComposeInteropActivity::class.java))
+                        }
+                    }
                     else -> ComingSoonScreen(title = demoTitle, modifier = modifier)
                 }
             }
