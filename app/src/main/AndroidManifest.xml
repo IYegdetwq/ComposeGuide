@@ -22,6 +22,16 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+
+    <activity
+        android:name=".ui.interop.XmlComposeBasicActivity"
+        android:exported="false"
+        android:theme="@style/Theme.MyCompose" />
+
+    <activity
+        android:name=".ui.interop.XmlComposeInteropActivity"
+        android:exported="false"
+        android:theme="@style/Theme.MyCompose" />
   </application>
 
 </manifest>
